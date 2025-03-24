@@ -18,4 +18,4 @@ ENV MONGODB_NAME=todo-dev
 
 ENV PORT=5000
 
-CMD ["npm","run","dev"]
+CMD ["npm","start"]
