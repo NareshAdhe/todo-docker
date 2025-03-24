@@ -4,18 +4,10 @@ WORKDIR /app
 
 COPY package*.json .
 
-RUN npm install
+RUN npm install --only=production
 
 COPY . .
 
-ENV MONGODB_USERNAME=root
-
-ENV MONGODB_PASSWORD=secret
-
-ENV MONGODB_URL=mongodb
-
-ENV MONGODB_NAME=todo-dev
-
-ENV PORT=5000
+EXPOSE 5000
 
 CMD ["npm","start"]
